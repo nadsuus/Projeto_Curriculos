@@ -1,12 +1,20 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CandidaturaController;
+use App\Http\Controllers\ProfileController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Página inicial → redireciona para o formulário de candidaturas
+Route::get('/', fn () => redirect()->route('candidaturas.create'));
 
+// Formulário e envio
+Route::get('/candidaturas/create', [CandidaturaController::class, 'create'])
+    ->name('candidaturas.create');
+
+Route::post('/candidaturas', [CandidaturaController::class, 'store'])
+    ->name('candidaturas.store');
+
+// Rotas Breeze (autenticação) — pode manter mesmo sem usar agora
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
