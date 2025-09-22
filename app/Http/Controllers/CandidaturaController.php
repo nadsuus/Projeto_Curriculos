@@ -46,7 +46,7 @@ class CandidaturaController extends Controller
         // Enviar e-mail
         $recipient = env('HR_MAIL_TO', env('MAIL_FROM_ADDRESS'));
         if ($recipient) {
-            Mail::to($recipient)->send(new NovaCandidaturaMail($candidatura));
+            Mail::to($recipient)->queue(new NovaCandidaturaMail($candidatura));
         }
 
         return redirect()
