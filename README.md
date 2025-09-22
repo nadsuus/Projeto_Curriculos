@@ -223,9 +223,6 @@ php artisan migrate
 - CI com GitHub Actions (rodar testes a cada push/PR).
 - Docker para padronizar o ambiente.
 
-## Envio do Projeto
-- Publique o código em um repositório (GitHub, GitLab ou outro) e envie o link para: `ugtsicdev@gmail.com`.
-
 ## Glossário
 - ORM (Eloquent): mapeia tabela do banco em classes PHP.
 - Migration: script versionado para criar/alterar tabelas.
