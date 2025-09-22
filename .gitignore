@@ -1,24 +1,53 @@
+# Logs e SO
 *.log
+Thumbs.db
 .DS_Store
+
+# Ambiente e configs locais
 .env
+.env.*
 .env.backup
 .env.production
-.phpactor.json
-.phpunit.result.cache
+auth.json
+
+# IDEs/editores
 /.fleet
 /.idea
 /.nova
-/.phpunit.cache
 /.vscode
 /.zed
-/auth.json
+.phpactor.json
+.phpunit.result.cache
+/.phpunit.cache
+
+# Dependências
 /node_modules
+/vendor
+
+# Build frontend
 /public/build
 /public/hot
+
+# Arquivos públicos gerados por links simbólicos
 /public/storage
+
+# Laravel storage (ignorar tudo exceto storage/app/public)
+# Chaves e pail
 /storage/*.key
 /storage/pail
-/vendor
+# Ignorar tudo em storage/app exceto a pasta public
+/storage/app/*
+!/storage/app/public
+# Ignorar framework e logs
+/storage/framework/*
+/storage/logs/*
+
+# Cache e bootstrap
+/bootstrap/cache/*
+
+# Banco SQLite local
+database/*.sqlite
+
+# Homestead
 Homestead.json
 Homestead.yaml
-Thumbs.db
