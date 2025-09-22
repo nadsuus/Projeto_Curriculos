@@ -1,14 +1,39 @@
-# Logs e SO
-*.log
-Thumbs.db
-.DS_Store
+# Dependências
+/vendor/
+/node_modules/
 
-# Ambiente e configs locais
+# Ambiente e configs locais (nunca commitar)
 .env
 .env.*
 .env.backup
 .env.production
 auth.json
+
+# Laravel storage (ignorar tudo exceto storage/app/public)
+/storage/*.key
+/storage/pail
+/storage/app/*
+!/storage/app/public
+/storage/framework/*
+/storage/logs/*
+
+# Cache e bootstrap
+/bootstrap/cache/*
+
+# Banco SQLite local
+/database/*.sqlite
+
+# Build frontend
+/public/build
+/public/hot
+
+# Arquivos públicos gerados por links simbólicos
+/public/storage
+
+# Logs e SO
+*.log
+Thumbs.db
+.DS_Store
 
 # IDEs/editores
 /.fleet
@@ -19,34 +44,6 @@ auth.json
 .phpactor.json
 .phpunit.result.cache
 /.phpunit.cache
-
-# Dependências
-/node_modules
-/vendor
-
-# Build frontend
-/public/build
-/public/hot
-
-# Arquivos públicos gerados por links simbólicos
-/public/storage
-
-# Laravel storage (ignorar tudo exceto storage/app/public)
-# Chaves e pail
-/storage/*.key
-/storage/pail
-# Ignorar tudo em storage/app exceto a pasta public
-/storage/app/*
-!/storage/app/public
-# Ignorar framework e logs
-/storage/framework/*
-/storage/logs/*
-
-# Cache e bootstrap
-/bootstrap/cache/*
-
-# Banco SQLite local
-database/*.sqlite
 
 # Homestead
 Homestead.json
