@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
+use PHPUnit\Framework\Attributes\Test;
 use App\Models\Candidatura;
 use App\Mail\NovaCandidaturaMail;
 use Illuminate\Http\UploadedFile;
@@ -14,7 +15,7 @@ class CandidaturaTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
+    #[Test]
     public function submeter_candidatura_valida_salva_registro_arquivo_e_enfileira_email()
     {
         Mail::fake();
@@ -49,7 +50,7 @@ class CandidaturaTest extends TestCase
         });
     }
 
-    /** @test */
+    #[Test]
     public function valida_arquivo_muito_grande_e_tipo_invalido()
     {
         // Arquivo > 1MB deve falhar
