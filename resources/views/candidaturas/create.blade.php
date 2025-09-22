@@ -17,8 +17,19 @@
     @endif
 
     <form action="{{ route('candidaturas.store') }}" method="POST" enctype="multipart/form-data" class="space-y-4">
-      @csrf
+      @csrf,
 
+      <div class="hidden" aria-hidden="true">
+          <label for="website">Não preencher</label>
+          <input
+              id="website"
+              name="website"
+              type="text"
+              value=""
+              tabindex="-1"
+              autocomplete="off"
+          >
+      </div>
       <div>
         <label class="block text-sm font-medium">Nome</label>
         <input type="text" name="nome" value="{{ old('nome') }}" required maxlength="255"
@@ -74,10 +85,7 @@
       </div>
 
       <div class="pt-2">
-        <button type="submit"
-                class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">
-          Enviar
-        </button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
       </div>
     </form>
   </div>

@@ -22,7 +22,7 @@ Projeto desenvolvido para UGTSIC - SESAP/RN (2025).
 ## Instalação e Execução (passo a passo)
 1. Clonar o repositório e entrar na pasta do projeto
    ```bash
-   git clone <https://github.com/nadsuus/Projeto_Curriculos>
+   git clone <https://github.com/nadsuus/Projeto_Curriculos.git>
    cd <PASTA_PROJETO>
    ```
 

@@ -13,7 +13,8 @@ Route::get('/candidaturas/create', [CandidaturaController::class, 'create'])
     ->name('candidaturas.create');
 
 Route::post('/candidaturas', [CandidaturaController::class, 'store'])
-    ->name('candidaturas.store');
+    ->name('candidaturas.store')
+    ->middleware('throttle:5,1');
 
 // Rotas Breeze (autenticação)
 Route::get('/dashboard', function () {
